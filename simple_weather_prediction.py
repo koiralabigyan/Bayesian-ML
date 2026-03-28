@@ -1,4 +1,4 @@
-# dataset
+# Dataset
 data = [
     ["Sunny","Hot","High","Weak","No"],
     ["Sunny","Hot","High","Strong","No"],
@@ -11,9 +11,7 @@ data = [
     ["Sunny","Cool","Normal","Weak","Yes"],
     ["Rainy","Mild","Normal","Weak","Yes"]
 ]
-
 features = ["Outlook", "Temp", "Humidity", "Wind"]
-target_index = 4
 
 # Separate X and y
 X = [row[:4] for row in data]
@@ -68,7 +66,6 @@ def predict(sample):
     
     # return class with max probability
     return max(probs, key=probs.get), probs
-
 
 # Test sample
 test = ["Sunny","Cool","High","Strong"]
